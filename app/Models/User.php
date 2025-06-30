@@ -2,16 +2,16 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\Models\Feature;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
-
+    use Notifiable, SoftDeletes, Feature;
     /**
      * The attributes that are mass assignable.
      *
@@ -44,5 +44,24 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+
+    public function permissions()
+    {
+        return $this->belongsToMany(Permission::class, 'user_permission')->withTimestamps();
+    }
+    public function givePermissionTo(Permission $permission)
+    {
+        return $this->permissions()->save($permission);
+    }
+    public function hasPermission(Permission $permission)
+    {
+        return $this->permissions()->get()->whereIn('id', $permission->id)->isNotEmpty();
     }
 }

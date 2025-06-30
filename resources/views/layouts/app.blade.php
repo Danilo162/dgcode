@@ -34,12 +34,16 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- AOS (Animate On Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link href="{{ asset('css/gdd-styles.css') }}" rel="stylesheet">
+
     @stack('styles')
 
     <!-- Google Analytics -->
@@ -59,7 +63,7 @@
 <div class="contact-bar">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6">
+            <div class="col-lg-8">
                 <div class="d-flex flex-wrap gap-4">
                     <a href="tel:+22500000000" class="text-decoration-none">
                         <i class="fas fa-phone me-2"></i>+225 XX XX XX XX
@@ -68,64 +72,27 @@
                         <i class="fas fa-envelope me-2"></i>contact@gdd-ci.org
                     </a>
                     <span>
-                        <i class="fas fa-map-marker-alt me-2"></i>Abidjan, Côte d'Ivoire
-                    </span>
+                            <i class="fas fa-map-marker-alt me-2"></i>Abidjan, Côte d'Ivoire
+                        </span>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="d-flex align-items-center justify-content-lg-end justify-content-start gap-4 mt-2 mt-lg-0">
-                    <!-- Sélecteur de langue -->
-                    <div class="language-selector">
-                        <div class="dropdown">
-                            <button class="btn btn-sm language-btn dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-globe me-2"></i>
-                                <span class="current-lang">FR</span>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end language-menu" aria-labelledby="languageDropdown">
-                                <li>
-                                    <a class="dropdown-item language-option active" href="#" data-lang="fr">
-                                        <img src="https://flagcdn.com/w20/fr.png" alt="Français" class="flag-icon me-2" width="20">
-                                        Français
-                                        <i class="fas fa-check ms-auto text-primary"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item language-option" href="#" data-lang="en">
-                                        <img src="https://flagcdn.com/w20/gb.png" alt="English" class="flag-icon me-2" width="20">
-                                        English
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item language-option" href="#" data-lang="ar">
-                                        <img src="https://flagcdn.com/w20/sa.png" alt="العربية" class="flag-icon me-2" width="20">
-                                        العربية
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Séparateur vertical -->
-                    <div class="separator"></div>
-
-                    <!-- Réseaux sociaux -->
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook" title="Suivez-nous sur Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" aria-label="Twitter" title="Suivez-nous sur Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" aria-label="LinkedIn" title="Suivez-nous sur LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" aria-label="Instagram" title="Suivez-nous sur Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" aria-label="YouTube" title="Notre chaîne YouTube">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
+            <div class="col-lg-4">
+                <div class="social-links text-lg-end text-start mt-2 mt-lg-0">
+                    <a href="#" aria-label="Facebook" title="Suivez-nous sur Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter" title="Suivez-nous sur Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" title="Suivez-nous sur LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram" title="Suivez-nous sur Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="YouTube" title="Notre chaîne YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -437,14 +404,13 @@
                 <h5><i class="fas fa-link me-2"></i>Liens Rapides</h5>
                 <div class="footer-section">
                     <a href="{{ route('home') }}">Accueil</a>
-                    <a href="{{ route('qui-sommes-nous') }}">À Propos</a>
-                    <a href="{{ route('projets.index') }}">Projets</a>
-                    <a href="{{ route('activites.index') }}">Activités</a>
-                    <a href="{{ route('actualites.index') }}">Actualités</a>
-                {{--    <a href="{{ route('trainings.index') }}">Formations</a>--}}
-                    <a href="{{ route('evenements.index') }}">Événements</a>
-                    <a href="{{ route('galerie.photos') }}">Galerie Photo</a>
-                    <a href="{{ route('galerie.videos') }}">Galerie videos</a>
+                    <a href=>À Propos</a>
+                    <a href="">Projets</a>
+                    <a href="">Activités</a>
+                    <a href="">Actualités</a>
+                    <a href="">Formations</a>
+                    <a href="">Événements</a>
+                    <a href="">Galerie</a>
                 </div>
             </div>
 
@@ -624,6 +590,7 @@
             }
         });
     }, observerOptions);
+
     // Observe fade-in elements
     document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in').forEach(el => {
@@ -1078,121 +1045,6 @@
             setTimeout(() => notification.remove(), 300);
         });
     };
-
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const languageOptions = document.querySelectorAll('.language-option');
-        const currentLangSpan = document.querySelector('.current-lang');
-        const languageBtn = document.querySelector('.language-btn');
-
-        // Fonction pour détecter la langue actuelle basée sur l'URL
-        function getCurrentLanguageFromUrl() {
-            const path = window.location.pathname;
-            const segments = path.split('/').filter(segment => segment !== '');
-
-            // Si pas de préfixe de langue (URL racine), retourner 'fr' par défaut
-            if (segments.length === 0 || !['fr', 'en', 'ar'].includes(segments[0])) {
-                return 'fr';
-            }
-
-            return segments[0];
-        }
-
-        // Fonction pour changer la langue
-        function changeLanguage(langCode, langName, flagSrc, redirect = true) {
-            // Mettre à jour le bouton actuel
-            currentLangSpan.textContent = langCode.toUpperCase();
-
-            // Mettre à jour les classes actives
-            languageOptions.forEach(option => {
-                option.classList.remove('active');
-                const checkIcon = option.querySelector('.fa-check');
-                if (checkIcon) {
-                    checkIcon.remove();
-                }
-            });
-
-            // Ajouter la classe active à l'option sélectionnée
-            const selectedOption = document.querySelector(`[data-lang="${langCode}"]`);
-            if (selectedOption) {
-                selectedOption.classList.add('active');
-                selectedOption.insertAdjacentHTML('beforeend', '<i class="fas fa-check ms-auto text-primary"></i>');
-            }
-
-            // Fermer le dropdown
-            const dropdown = bootstrap.Dropdown.getInstance(languageBtn);
-            if (dropdown) {
-                dropdown.hide();
-            }
-
-            // Sauvegarder la préférence dans localStorage
-            localStorage.setItem('selectedLanguage', langCode);
-
-            // Redirection avec gestion de l'URL
-            if (redirect) {
-                const currentPath = window.location.pathname;
-                const segments = currentPath.split('/').filter(segment => segment !== '');
-
-                // Supprimer le préfixe de langue existant s'il y en a un
-                if (['fr', 'en', 'ar'].includes(segments[0])) {
-                    segments.shift();
-                }
-
-                let newPath;
-                if (langCode === 'fr') {
-                    // Pour le français, pas de préfixe (URL racine)
-                    newPath = segments.length > 0 ? '/' + segments.join('/') : '/';
-                } else {
-                    // Pour les autres langues, ajouter le préfixe
-                    newPath = '/' + langCode + (segments.length > 0 ? '/' + segments.join('/') : '');
-                }
-
-                // Conserver les paramètres de requête et le hash
-                const search = window.location.search;
-                const hash = window.location.hash;
-
-                window.location.href = newPath + search + hash;
-            }
-
-            console.log(`Langue changée vers: ${langName} (${langCode})`);
-        }
-
-        // Gestionnaire d'événements pour les options de langue
-        languageOptions.forEach(option => {
-            option.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                const langCode = this.dataset.lang;
-                const langName = this.textContent.trim();
-                const flagImg = this.querySelector('.flag-icon');
-                const flagSrc = flagImg ? flagImg.src : '';
-
-                changeLanguage(langCode, langName, flagSrc, true);
-            });
-        });
-
-        // Initialiser la langue au chargement de la page
-        function initializeLanguage() {
-            const currentLang = getCurrentLanguageFromUrl();
-            const savedLanguage = localStorage.getItem('selectedLanguage');
-
-            // Utiliser la langue de l'URL ou celle sauvegardée, avec 'fr' comme défaut
-            const langToUse = currentLang || savedLanguage || 'fr';
-
-            const selectedOption = document.querySelector(`[data-lang="${langToUse}"]`);
-            if (selectedOption) {
-                const langName = selectedOption.textContent.trim();
-                const flagImg = selectedOption.querySelector('.flag-icon');
-                const flagSrc = flagImg ? flagImg.src : '';
-
-                // Ne pas rediriger lors de l'initialisation
-                changeLanguage(langToUse, langName, flagSrc, false);
-            }
-        }
-
-        // Initialiser au chargement
-        initializeLanguage();
-    });
 </script>
 
 @stack('scripts')

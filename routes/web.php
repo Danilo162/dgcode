@@ -2,6 +2,7 @@
 // routes/web.php - VERSION MISE À JOUR
 
 use App\Http\Controllers\OngController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
@@ -12,7 +13,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ContactController;
-
+Auth::routes();
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -217,3 +218,6 @@ if (app()->environment('local')) {
         });
     });
 }
+
+
+/*Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');*/

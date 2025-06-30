@@ -8,9 +8,6 @@ use Illuminate\Http\Request;
 // ===== HomeController MINIMAL =====
 
 
-namespace App\Http\Controllers;
-
-
 class HomeController extends Controller
 {
     public function index()

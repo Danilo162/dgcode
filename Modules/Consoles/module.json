@@ -1,0 +1,11 @@
+{
+    "name": "Consoles",
+    "alias": "consoles",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Consoles\\App\\Providers\\ConsolesServiceProvider"
+    ],
+    "files": []
+}
